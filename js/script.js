@@ -1,0 +1,5 @@
+$(function(){
+
+  $('.slide-show').slick();
+
+});

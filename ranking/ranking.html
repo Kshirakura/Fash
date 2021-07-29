@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="i am dummy fashion site ranking">
+    <title>Fash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/slick-theme.css"/>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <header id="header"  class="flex-items">
+      <h1 class="site-title">
+        Fash <!--ロゴ作りましょう-->
+      </h1>
+      <!-- モーダル -->
+      <div class="modal">
+        <ul>
+          <li>items</li>
+          <li>trends</li>
+          <li>stylings</li>
+          <li>more</li>
+        </ul>
+      </div>
+      <!-- モーダル -->
+      <nav class="mainnav">
+        <ul class="flex-items">
+          <li>items</li>
+          <li>trends</li>
+          <li>stylings</li>
+          <li>more</li>
+        </ul>
+      </nav>
+      <nav class="subnav">
+        <ul class="flex-items">
+          <li><img src="../img/hamburger_btn.png" class="hamburger" alt="hamburger-btn"></li>
+          <li><img src="../img/loupe.png" alt="search"></li>
+          <li><img src="../img/account_btn.png" alt="account"></li>
+          <li><img src="../img/shopping_cart_btn.png" alt="cart"></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img src ="../img/modal/color_change.jpg" alt="colors">
+      <div class="item-info">
+        <div class="item-text">
+          <h2 class="item-title">item-title</h2>
+          <p>itemdescriptionitemdescriptionitemdescription</p>
+          <p>itemdescriptionitemdescriptionitemdescription</p>
+          <p>itemdescriptionitemdescriptionitemdescription</p>
+          <h3 class="price">￥ XX.XXX</h3>
+        </div>
+      </div>
+      <div class="colors">
+        <div class="white">white</div>
+        <div class="gray">gray</div>
+        <div class="black">black</div>
+        <div class="red">red</div>
+      </div>
+      <div class="size-pick flex-items">
+        <label for="size">サイズ:</label>
+        <select id="size">
+          <option>S</option>
+          <option selected>M</option>
+          <option>L</option>
+        </select>
+      </div>
+      <div class="number flex-items">
+        <label for="number">数量:</label>
+        <input type="number" id="number">
+      </div>
+      <div class="sum">
+        <span>小計:</span>
+        <span>￥ XX.XXX</span>
+      </div>
+      <div class="add-cart-btn">
+        カートに入れる
+      </div>
+    </main>
+    <footer id="footer">
+      <h2>Fash</h2>
+      <ul class="flex-items">
+        <li class="flex-items">
+          <img src="../img/sns/facebook.png" alt="facebook"><p>facebook</p>
+        </li>
+        <li class="flex-items">
+          <img src="../img/sns/twitter.png" alt="twitter"><p>twitter</p>
+        </li>
+        <li class="flex-items">
+          <img src="../img/sns/instagram.png" alt="instagram"><p>instagram</p>
+        </li>
+      </ul>
+      <p>&copy;Fash</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+  </body>

@@ -1,0 +1,422 @@
+@charset "utf-8";
+
+/* モバイルファーストで書いてみます */
+
+/* ------------
+全体
+------------ */
+
+html {
+  font-size:62.5%;
+}
+
+body {
+  width: 94%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align:bottom;
+}
+
+h2 {
+  font-size: 2.0rem;
+}
+
+/* --------
+slick 
+--------*/
+.slick-prev,
+.slick-next {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-prev:before
+{
+    content: '<';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '>';
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-next:before
+{
+    content: '>';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '<';
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 15px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* --------
+header 
+--------*/
+
+#header {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.site-title {
+  margin: 30px auto 15px;
+  font-size: 2rem;
+  text-align: center
+}
+
+.mainnav {
+  display: none;
+}
+
+.subnav .flex-items {
+  display: flex;
+  justify-content:space-between;
+  margin: 0 30%;
+}
+
+.subnav .flex-items li {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.modal {
+  display: none;
+}
+
+
+/* --------
+pickup
+--------*/
+
+#pickup {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#pickup .slide-show {
+  height: 60vh;
+}
+
+#pickup .slide-show img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+
+/* --------
+boxes 
+--------*/
+.boxes h2 {
+  text-align: center;
+}
+
+.boxes li {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.boxes .text {
+  position: absolute;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.6);
+  height: 20%;
+  width: 100%;
+  bottom: 0%;
+  color: #eee;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.boxes .text p {
+  opacity: 0.8
+}
+
+h2 {
+  text-align: center;
+}
+
+/* --------
+news 
+--------*/
+/* --------
+ranking
+--------*/
+
+/* --------
+blog
+--------*/
+
+#blog li {
+  display: flex;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+#blog li>img {
+  width: 40%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#blog li .info {
+  width: 60%;
+  background: #333;
+  color: #eee;
+  padding: 30px;
+}
+
+
+#blog li .info .author {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#blog li .info .author img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* --------
+items
+--------*/
+
+#items {
+  display: none;
+}
+
+/* --------
+footer
+--------*/
+
+#footer {
+  background:#555;
+  text-align: center;
+  color: #eee;
+}
+
+#footer h2 {
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+
+#footer li {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+#footer img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  /*--------
+  boxes
+   ------ */
+  .boxes > .flex-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+  }
+
+  .boxes > .flex-items li {
+    width: 49%;
+  }
+
+    /*--------
+    blog
+    ------ */
+    #blog {
+      margin-bottom: 60px;
+    }
+
+    #blog > .flex-items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    #blog > .flex-items > li {
+      width: 49%;
+    }
+
+    /*--------
+    footer
+    ------ */
+    #footer .flex-items{
+      display: flex;
+      justify-content: center;
+    }
+    /*--------
+    boxes
+    ------ */
+
+    /*--------
+    boxes
+    ------ */
+
+    /*--------
+    boxes
+    ------ */
+  
+}
+
+@media screen and (min-width: 1025px) {
+
+  .flex-items {
+    display: flex;
+  }
+
+    /*--------
+    header
+    ------ */
+  
+  #header {
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  #header .site-title {
+    margin: 0;
+    width: 200px;
+    
+  }
+  
+  .mainnav {
+    display: block;
+  }
+  
+  .mainnav li {
+    margin-right: 20px;
+  }
+  .mainnav li:last-child {
+    margin-right: 0px;
+  }
+
+  .subnav {
+    margin-left: auto;
+  }
+
+  .subnav .flex-items {
+    margin: 0;
+  }
+
+  .subnav li:first-child {
+    display: none;
+  }
+  
+  .subnav li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
+
+  .subnav li img {
+    width: 20px;
+    height: 20px;
+  }
+
+    /*--------
+    pickup
+    ------ */
+    #pickup .slide-show {
+      height: 80vh;
+    }
+
+    #pickup .slide-show img {
+      height: 80vh;
+      object-fit: cover;
+    }
+
+    /*--------
+    boxes
+    ------ */
+    .boxes > .flex-items li {
+      width: 32%;
+    }
+
+    /*--------
+    items
+    ------ */
+    #items {
+      display: block;
+      margin-bottom: 60px;
+    }
+
+    #items h2 {
+      margin-bottom: 15px;
+    }
+
+    #items img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right:10px; 
+      margin-bottom: 20px;
+    }
+
+    #items > .flex-items {
+      justify-content: center;
+    }
+
+    #items ul {
+      margin-right: 30px;
+    }
+
+    #items ul:last-child {
+      margin-right: 0px;
+    }
+
+    /*--------
+    news
+    ------ */
+    /*--------
+    news
+    ------ */
+
+    
+
+}
+
