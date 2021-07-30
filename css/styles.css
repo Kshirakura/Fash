@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+
 /* モバイルファーストで書いてみます */
 
 /* ------------
@@ -13,6 +15,7 @@ html {
 body {
   width: 94%;
   margin: 0 auto;
+  font-family: 'Oswald', sans-serif;
 }
 
 img {
@@ -34,6 +37,71 @@ img {
 h2 {
   font-size: 2.0rem;
 }
+
+
+
+h2 {
+  letter-spacing: 0.2rem
+}
+h3, h4 {
+  letter-spacing: 0.1rem
+}
+
+.content-title {
+  margin-bottom: 9px;
+}
+
+  /* -----------
+  ハンバーガーメニュー
+  ------------ */
+
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+    background-color: #222;
+    border-radius: 3px;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 23px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 300ms 0s ease;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+  display: none;
+}
+
 
 /* --------
 slick 
@@ -86,36 +154,62 @@ header
 --------*/
 
 #header {
-  width: 100%;
+  max-width: 1020px;
+  padding-top: 30px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
 }
 
 
 .site-title {
-  margin: 30px auto 15px;
-  font-size: 2rem;
-  text-align: center
+  width: 90px;
 }
 
 .mainnav {
   display: none;
+  color: #333;
+}
+
+.mainnav a {
+  color: #333;
+}
+
+.subnav {
+  margin: 0 auto;
+
 }
 
 .subnav .flex-items {
   display: flex;
-  justify-content:space-between;
-  margin: 0 30%;
 }
 
-.subnav .flex-items li {
-  width: 20px;
-  height: 20px;
+.subnav .flex-items li{
+  width: 24px;
+  height: 24px;
+  margin-right: 40px;
 }
-
-
 
 .modal {
   display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  position: fixed;
+  background:rgba(0, 0, 0, 0.75);
+  text-align: center;
+  z-index: 100;
+  padding-top: 30px;
+  color: #fff;
+  font-size: 2.0rem;
+  padding: 20px;
+}
+
+.modal li {
+  margin-bottom: 10px;
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
 }
 
 
@@ -124,7 +218,7 @@ pickup
 --------*/
 
 #pickup {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   text-align: center;
 }
 
@@ -173,6 +267,9 @@ h2 {
 /* --------
 news 
 --------*/
+#news, #ranking {
+  margin-bottom: 45px;
+}
 /* --------
 ranking
 --------*/
@@ -180,6 +277,9 @@ ranking
 /* --------
 blog
 --------*/
+#blog {
+  margin-bottom: 45px;
+}
 
 #blog li {
   display: flex;
@@ -250,7 +350,103 @@ footer
   height: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
+
+  .mainnav {
+    display: block;
+  }
+  /*--------
+  dropdown 
+  ------ */
+  .dropmenu{
+    list-style-type: none;
+    width: 400px;
+    margin: auto;
+    padding: 0;
+  }
+  .dropmenu:before, .dropmenu:after{
+    content: "";
+    display: table;
+  }
+  .dropmenu:after{
+    clear: both;
+  }
+
+  .dropmenu li{
+    position: relative;
+    width: 20%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .dropmenu li a{
+    display: block;
+    margin: 0;
+    /* padding: 15px 0 11px; */
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+  }
+  .dropmenu li ul{
+    list-style: none;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    padding: 0;
+  }
+  .dropmenu li ul li{
+    width: 100%;
+  }
+  .dropmenu li ul li a{
+    padding: 13px 15px;
+    border-top: 1px solid #333;
+    background: #fff;
+    text-align: center;
+  }
+  .dropmenu li:hover > a{
+    background: #fff;
+  }
+  .dropmenu li a:hover{
+    background: #fff;
+  }
+
+  #fade-in li ul{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0s;
+  }
+  #fade-in li:hover ul{
+    visibility: visible;
+    opacity: 1;
+  }
+  #fade-in li ul li a{
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+  }
+  #fade-in li:hover ul li a{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .subnav {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .subnav .flex-items li {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 50px;
+  }
+  
   /*--------
   boxes
    ------ */
@@ -302,11 +498,22 @@ footer
   
 }
 
-@media screen and (min-width: 1025px) {
+@media (min-width: 1025px) {
 
+  body {
+    width: 1020px;
+  }
+  
   .flex-items {
     display: flex;
   }
+
+    /*--------
+    ハンバーガーボタン
+    ------ */
+    .menu-btn {
+      display: none;
+    }
 
     /*--------
     header
@@ -315,42 +522,19 @@ footer
   #header {
     align-items: center;
     margin-top: 20px;
+    width: 1020px;
   }
 
   #header .site-title {
     margin: 0;
-    width: 200px;
+    width: 150px;
     
   }
+
   
-  .mainnav {
-    display: block;
-  }
-  
-  .mainnav li {
-    margin-right: 20px;
-  }
-  .mainnav li:last-child {
+  .subnav .flex-items li {
     margin-right: 0px;
-  }
-
-  .subnav {
-    margin-left: auto;
-  }
-
-  .subnav .flex-items {
-    margin: 0;
-  }
-
-  .subnav li:first-child {
-    display: none;
-  }
-  
-  .subnav li {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 20px;
+    margin-left: 40px
   }
 
   .subnav li img {
@@ -358,15 +542,17 @@ footer
     height: 20px;
   }
 
+
+
     /*--------
     pickup
     ------ */
     #pickup .slide-show {
-      height: 80vh;
+      height: 72vh;
     }
 
     #pickup .slide-show img {
-      height: 80vh;
+      height: 72vh;
       object-fit: cover;
     }
 

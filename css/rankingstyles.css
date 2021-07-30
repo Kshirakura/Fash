@@ -1,2 +1,172 @@
 @charset "utf-8";
 
+/* モバイルファーストで書いてみます */
+
+/* ------------
+スマホ
+------------ */
+
+/* ------------
+全体
+------------ */
+.subnav {
+  margin: 0;
+  margin-left: auto;
+}
+
+.subnav .flex-items li {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+main img {
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  vertical-align: bottom;
+  margin-bottom: 30px;
+}
+
+main li {
+  display: none;
+}
+
+main .active {
+  display: block;
+}
+
+.item-info .item-title {
+  text-align: left;
+  font-size: 2.0rem;
+}
+
+.item-info p {
+  line-height: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.item-info h3 {
+  margin-bottom: 15px;
+}
+
+.colors {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.colors input[type=radio] {
+  display: none;
+}
+
+.colors label{
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  padding: 3px;
+  border: solid 1px #444;
+}
+
+.colors label:hover {
+  outline: solid 1px #000;
+  outline-offset: 1px;
+}
+
+.picked {
+  outline: solid 1px #000;
+  outline-offset: 1px;
+}
+
+.colors .white {
+  background: white;
+}
+.colors .gray {
+  background: gray;
+}
+.colors .black {
+  background: black;
+}
+.colors .red {
+  background: red;
+}
+
+.choices {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+select {
+  border: solid 1px #000;
+  width: 2rem;
+  padding-left: 0.25rem;
+}
+
+input {
+  border: solid 1px #000;
+  width: 3rem;
+}
+
+.sum {
+  margin-bottom: 21px;
+}
+
+.add-cart-btn {
+  width: 240px;
+  margin-bottom: 60px;
+  padding: 10px 20px;
+  /* border: solid 1px ; */
+  font-size: 1.5rem;
+  background: salmon;
+  color: white;
+}
+
+
+
+/* ------------
+全体
+------------ */
+/* ------------
+全体
+------------ */
+/* ------------
+全体
+------------ */
+
+
+/* ------------
+タブレット
+------------ */
+
+@media screen and (min-width: 768px) {
+  main img {
+    height: 600px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .flex {
+    display: flex;
+  }
+  .flex ul {
+    margin-right: 30px;
+    margin-bottom: 60px;
+  }
+
+  .flex > .text {
+    margin: auto;
+  }
+
+  main img {
+    margin-bottom: 0px;
+  }
+
+
+}
+
+
+/* ------------
+PC
+------------ */
+@media screen and (min-width: 1025px) {
+
+
+}
