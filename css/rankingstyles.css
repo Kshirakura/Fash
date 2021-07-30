@@ -9,6 +9,12 @@
 /* ------------
 全体
 ------------ */
+input, label, select {
+  cursor: pointer;
+}
+
+
+
 .subnav {
   margin: 0;
   margin-left: auto;
