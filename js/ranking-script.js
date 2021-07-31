@@ -12,5 +12,4 @@ $(function(){
       var subsum = value * parseInt($('.number').children('input').val());
       $('.subtotal').html('￥' + subsum.toLocaleString());
   });
-  
 });
