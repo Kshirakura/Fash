@@ -361,11 +361,6 @@ blog
   transition: .3s ease-in-out;
 }
 
-#blog .flex-items img:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
 #blog  .info {
   width: 60%;
   background: #333;
@@ -655,7 +650,7 @@ footer
     #pickup .slide-show img {
       height: 72vh;
       object-fit: cover;
-      font-family: 'object-fit: cover;'; 
+      font-family: 'object-fit: cover; object-position: top;'; 
     }
 
     /*--------
