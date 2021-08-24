@@ -260,6 +260,7 @@ pickup
 #pickup .slide-show img {
   height: 55vh;
   object-fit: cover;
+  font-family: 'object-fit: cover;'; 
 }
 
 
@@ -352,6 +353,7 @@ blog
   width: 40%;
   height: 200px;
   object-fit: cover;
+  font-family: 'object-fit: cover;'; 
   object-position: center top;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -653,6 +655,7 @@ footer
     #pickup .slide-show img {
       height: 72vh;
       object-fit: cover;
+      font-family: 'object-fit: cover;'; 
     }
 
     /*--------

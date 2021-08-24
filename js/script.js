@@ -1,5 +1,14 @@
 $(function(){
 
+    // ie判定
+  var userAgent = window.navigator.userAgent.toLowerCase();
+  if(userAgent.indexOf('msie') != -1 ||
+        userAgent.indexOf('trident') != -1) {
+          $('.twitter-share-button').hide();
+        }
+
+  objectFitImages();
+
   $('.slide-show').slick({
     autoplay: true,
     autoplaySpeed: 5000,
