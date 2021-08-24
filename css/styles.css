@@ -16,6 +16,7 @@ body {
   width: 94%;
   margin: 0 auto;
   font-family: 'Oswald', sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
 
 img {
@@ -50,6 +51,30 @@ h3, h4 {
 
 .content-title {
   margin-bottom: 9px;
+  position: relative;
+  z-index: 3
+}
+
+.content-title:before,
+.content-title:after {
+  content: '';
+  width: 30%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  display: inline-block;
+  z-index:-1;
+  opacity: .8;
+}
+
+.content-title:before {
+  top: 65%;
+  left: 0;
+}
+
+.content-title:after {
+  top: 65%;
+  right: 0;
 }
 
   /* -----------
@@ -107,59 +132,24 @@ h3, h4 {
 /* --------
 slick 
 --------*/
-.slick-prev,
-.slick-next {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  z-index: 20;
-}
 
-.slick-prev {
-  left: 10px;
-}
-
-.slick-prev:before
-{
-    content: '<';
-}
-[dir='rtl'] .slick-prev:before
-{
-    content: '>';
-}
-
-.slick-next {
-  right: 10px;
-}
-
-.slick-next:before
-{
-    content: '>';
-}
-[dir='rtl'] .slick-next:before
-{
-    content: '<';
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 15px;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
 
 /* --------
 シェアボタン
 --------*/
 .sns-btn {
+  display: flex;
   justify-content: center;
   margin-bottom: 60px;
+  /* vertical-align: bottom; */
 }
 
 .sns-btn div {
   margin-right: 20px;
+}
+
+.fb_iframe_widget > span {
+	vertical-align: baseline !important;
 }
 
 /* --------
@@ -264,11 +254,11 @@ pickup
 }
 
 #pickup .slide-show {
-  height: 60vh;
+  height: 55vh;
 }
 
 #pickup .slide-show img {
-  height: 60vh;
+  height: 55vh;
   object-fit: cover;
 }
 
@@ -451,6 +441,11 @@ footer
   .mainnav {
     display: block;
   }
+
+  .content-title:before,
+.content-title:after {
+  width: 40%;
+}
   /*--------
   dropdown 
   ------ */
@@ -606,6 +601,10 @@ footer
   
   .flex-items {
     display: flex;
+  }
+
+  .content-title {
+    font-size: 3rem;
   }
 
     /*--------

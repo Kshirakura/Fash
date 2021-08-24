@@ -1,6 +1,10 @@
 $(function(){
 
-  $('.slide-show').slick();
+  $('.slide-show').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false
+  });
 
   $('.menu-btn').click(function(){
     if($('.modal').css('display') == 'block') {
