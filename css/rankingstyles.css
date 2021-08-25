@@ -20,11 +20,6 @@ input, label, select {
   margin-left: auto;
 }
 
-.subnav .flex-items li {
-  margin-right: 5px;
-  margin-left: 10px;
-}
-
 main img {
   height: 400px;
   object-fit: cover;

@@ -8,66 +8,69 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/rankingstyles.css"><link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/slick-theme.css"/>
 
   </head>
   <body>
-    <header id="header"  class="flex-items">
-      <h1 class="site-title">
-        <a href="../index.html"><img src="../img/fashlogo.svg" alt="Fash"></a>
-      </h1>
-      <!-- モーダル -->
-      <div class="modal">
-        <ul>
-          <li class="top-btn">Top</li>
-          <li>items</li>
-          <li>trends</li>
-          <li>stylings</li>
-          <li>more</li>
-        </ul>
+    <header class="header">
+      <div class="header_container  flex-items">
+        <h1 class="site-title">
+          <a href="../index.html"><img src="../img/fashlogo.svg" alt="Fash"></a>
+        </h1>
+        <!-- モーダル -->
+        <div class="modal">
+          <ul>
+            <li class="top-btn">Top</li>
+            <li>items</li>
+            <li>trends</li>
+            <li>stylings</li>
+            <li>more</li>
+          </ul>
+        </div>
+        <!-- モーダル -->
+        <nav class="mainnav">
+          <ul id="fade-in" class="dropmenu">
+            <li><a href="#">Items</a>
+              <ul>
+                <li><a href="#">Items</a></li>
+                <li><a href="#">Items</a></li>
+                <li><a href="#">Items</a></li>
+                <li><a href="#">Items</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Trends</a>
+              <ul>
+                <li><a href="#">Trends</a></li>
+                <li><a href="#">Trends</a></li>
+                <li><a href="#">Trends</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Stylings</a>
+              <ul>
+                <li><a href="#">Stylings</a></li>
+                <li><a href="#">Stylings</a></li>
+                <li><a href="#">Stylings</a></li>
+              </ul>
+            </li>
+            <li><a href="#">More</a>
+              <ul>
+                <li><a href="#">More</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">More</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav class="subnav">
+          <ul class="flex-items">
+            <li><a href=""><i class="fas fa-search"></i></a></li>
+            <li><a href=""><i class="fas fa-user-alt"></i></a></li>
+            <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+          </ul>
+        </nav>  
       </div>
-      <!-- モーダル -->
-      <nav class="mainnav">
-        <ul id="fade-in" class="dropmenu">
-          <li><a href="#">Items</a>
-            <ul>
-              <li><a href="#">Items</a></li>
-              <li><a href="#">Items</a></li>
-              <li><a href="#">Items</a></li>
-              <li><a href="#">Items</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Trends</a>
-            <ul>
-              <li><a href="#">Trends</a></li>
-              <li><a href="#">Trends</a></li>
-              <li><a href="#">Trends</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Stylings</a>
-            <ul>
-              <li><a href="#">Stylings</a></li>
-              <li><a href="#">Stylings</a></li>
-              <li><a href="#">Stylings</a></li>
-            </ul>
-          </li>
-          <li><a href="#">More</a>
-            <ul>
-              <li><a href="#">More</a></li>
-              <li><a href="#">More</a></li>
-              <li><a href="#">More</a></li>
-              <li><a href="#">More</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <nav class="subnav">
-        <ul class="flex-items">
-          <li><a href=""><img src="../img/loupe.png" alt="search"></a></li>
-          <li><a href=""><img src="../img/account_btn.png" alt="account"></a></li>
-          <li><a href=""><img src="../img/shopping_cart_btn.png" alt="cart"></a></li>
-        </ul>
-      </nav>  
     </header>
     <main>
       <div class="flex">
@@ -135,9 +138,11 @@
       <div class="menu-btn"><span></span></div>
     </div>
 
-    <footer id="footer">
-      <h2>Fash</h2>
-      <p>&copy;Fash</p>
+    <footer class="footer">
+      <div class="footer_container container">
+        <h2>Fash</h2>
+        <p>&copy;Fash</p>
+      </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/slick.js"></script>
