@@ -2,393 +2,259 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Fashは、メンズファッションブランドです。常に最先端のファッションをお届けします。">
+    <meta name="description" content="ニッポンギョーザは美味しい野菜で作った美味しい餃子をお届けします。">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <title>Fash -メンズファッション-</title>
+    <title>ニッポンギョーザ -野菜餃子-美味しい野菜で作った美味しい餃子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
     <meta property="og:type" content="blog">
-    <meta property="og:description" content="Fashは、メンズファッションブランドです。常に最先端のファッションをお届けします。">
-    <meta property="og:title" content="Fash">
-    <meta property="og:url" content="https://kshirakura.github.io/Fash/">
-    <meta property="og:image" content="https://kshirakura.github.io/Fash/img/mainvisual-sns.jpg">
-    <meta property="og:site_name" content="Fash">
+    <meta property="og:description" content="ニッポンギョーザは美味しい野菜で作った美味しい餃子をお届けします。">
+    <meta property="og:title" content="ニッポンギョーザ">
+    <meta property="og:url" content="https://kshirakura.github.io/nippon_gyoza/">
+    <meta property="og:image" content="https://kshirakura.github.io/nippon_gyoza/img/nippongyoza_ogp.jpg">
+    <meta property="og:site_name" content="ニッポンギョーザ">
     <meta property="og:locale" content="ja_JP" />
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'ace3lug',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
   </head>
   <body>
+    <audio id="overSound1" preload="auto" loop>
+      <source src="sounds/sound1.mp3" type="audio/mp3">
+      <source src="sounds/sound1.ogg" type="audio/ogg">
+    </audio>
+    <audio id="overSound2" preload="auto" loop>
+      <source src="sounds/sound2.mp3" type="audio/mp3">
+      <source src="sounds/sound2.ogg" type="audio/ogg">
+    </audio>
+    <audio id="overSound3" preload="auto" loop>
+      <source src="sounds/sound3.mp3" type="audio/mp3">
+      <source src="sound3.ogg" type="audio/ogg">
+    </audio>
+    <audio id="overSound4" preload="auto" loop>
+      <source src="sounds/sound4.mp3" type="audio/mp3">
+      <source src="sounds/sound4.ogg" type="audio/ogg">
+    </audio>
     <header class="header">
-      <div class="header_container container flex-items">
-        <h1 class="site-title">
-          <a href="#"><img src="img/fashlogo.svg" alt="Fash"></a>
-        </h1>
-        <!-- モーダル -->
-        <div class="modal">
+      <div class="header_container">
+        <h1 class="site-title"><img src="img/nippongyoza_logo2.svg" alt="nippongyoza_logo"></h1>
+        <!-- ハンバーガーメニュー-->
+        <nav class="main_menu">
           <ul>
-            <li class="top-btn">Top</li>
-            <li>items</li>
-            <li>trends</li>
-            <li>stylings</li>
-            <li>more</li>
-        </ul>
-        </div>
-        <!-- モーダル ここまで-->
-        <nav class="mainnav">
-          <ul id="fade-in" class="dropmenu">
-            <li><a href="#">Items</a>
-              <ul>
-                <li><a href="#">Items</a></li>
-                <li><a href="#">Items</a></li>
-                <li><a href="#">Items</a></li>
-                <li><a href="#">Items</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Trends</a>
-              <ul>
-                <li><a href="#">Trends</a></li>
-                <li><a href="#">Trends</a></li>
-                <li><a href="#">Trends</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Stylings</a>
-              <ul>
-                <li><a href="#">Stylings</a></li>
-                <li><a href="#">Stylings</a></li>
-                <li><a href="#">Stylings</a></li>
-              </ul>
-            </li>
-            <li><a href="#">More</a>
-              <ul>
-                <li><a href="#">More</a></li>
-                <li><a href="#">More</a></li>
-                <li><a href="#">More</a></li>
-                <li><a href="#">More</a></li>
-              </ul>
-            </li>
+            <li><a class="top-btn" href="#">TOP</a></li>
+            <li><a class="scroll-btn" href="#concept">Concept</a></li>
+            <li><a class="scroll-btn" href="#about">About</a></li>
+            <li><a class="scroll-btn" href="#news">News</a></li>
+            <li><a class="scroll-btn" href="#goods">Goods</a></li>
           </ul>
         </nav>
-        <nav class="subnav">
-          <ul class="flex-items">
-            <li><a href=""><i class="fas fa-search"></i></a></li>
-            <li><a href=""><i class="fas fa-user-alt"></i></a></li>
-            <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
-          </ul>
-        </nav>  
-      </div> <!--header_container-->
+        <div class="hamburger-menu">
+          <div class="menu-btn"><span></span></div>
+        </div>
+      </div>
     </header>
     <main>
-      <!-- pickup -->
-      <div class="pickup">
-        <div class="pickup_container container">
-          <h2 class="content-title">Pickup</h2>
-          <div class="slide-show">
-            <div><a href=""><img src="img/mainvisual-sns.jpg" alt="slide1"></a></div>
-            <div><a href=""><img src="img/slide/color.jpg" alt="slide2"></a></div>
-            <div><a href=""><img src="img/slide/fill_red.jpg" alt="slide3"></a></div>
-            <div><a href=""><img src="img/slide/gray_coat_center.jpg" alt="slide4"></a></div>
+      <div class="attention">
+        <div class="attention_container">
+          <h1>※音を出しますか？</h1>
+          <div class="btn close">YES</div>
+          <div class="btn close sound_off">NO</div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal_container">
+          <div class="close">
+            <i class="far fa-times-circle"></i>
           </div>
-        </div>
-      </div>
-      <!-- pickup -->
-      <!-- news -->
-      <div class="news">
-        <div class="news_container container boxes">
-
-          <h2 class="content-title">News</h2>
-          <ul class="flex-items">
-            <li>
-              <a href="">
-                <img src="img/news/knitcap.jpg" alt="knitcap">
-                <div class="text">
-                  <h3>News Title</h3>
-                  <p>copycopycopycopy</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/news/cool.jpg" alt="cool">
-                <div class="text">
-                  <h3>News Title</h3>
-                  <p>copycopycopycopy</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/news/standone.jpg" alt="standone">
-                <div class="text">
-                  <h3>News Title</h3>
-                  <p>copycopycopycopy</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/news/from_under.jpg" alt="from_under">
-                <div class="text">
-                  <h3>News Title</h3>
-                  <p>copycopycopycopy</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/news/patarn.jpg" alt="pattern">
-                <div class="text">
-                  <h3>News Title</h3>
-                  <p>copycopycopycopy</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/news/gray_coats_side.jpg" alt="gray_coats_side">
-                <div class="text">
-                  <h3>News Title</h3>
-                  <p>copycopycopycopy</p>
-                </div>
-              </a>
-            </li>
+          <ul>
+            <li><a class="top-btn" href="#">TOP</a></li>
+            <li><a class="scroll-btn" href="#concept">Concept</a></li>
+            <li><a class="scroll-btn" href="#about">About</a></li>
+            <li><a class="scroll-btn" href="#news">News</a></li>
+            <li><a class="scroll-btn" href="#goods">Goods</a></li>
           </ul>
         </div>
       </div>
-        <!-- news -->
-        <!-- ranking -->
-      <div class="ranking">
-        <div class="ranking_container container boxes">
-
-          <h2  class="content-title">Ranking</h2>
-          <ul class="flex-items">
-            <li>
-              <a href="ranking/index.html">
-                <img src="img/ranking/coat.jpg" alt="coat">
-                <div class="text">
-                  <h3>No.1</h3>
-                  <p>￥XX.XXX</p>
-                </div>
-              </a>  
-            </li>
-            <li>
-              <a href="ranking/index.html">
-                <img src="img/ranking/no_tie.jpg" alt="no_tie">
-                <div class="text">
-                  <h3>No.2</h3>
-                  <p>￥XX.XXX</p>
-                </div>
-              </a> 
-            </li>
-            <li>
-              <a href="ranking/index.html">
-                <img src="img/ranking/modern.jpg" alt="modern">
-                <div class="text">
-                  <h3>No.3</h3>
-                  <p>￥XX.XXX</p>
-                </div>
-              </a> 
-            </li>
-            <li>
-              <a href="ranking/index.html">
-                <img src="img/ranking/shirt2.jpg" alt="shirt2">
-                <div class="text">
-                  <h3>No.4</h3>
-                  <p>￥XX.XXX</p>
-                </div>
-              </a> 
-            </li>
-            <li>
-              <a href="ranking/index.html">
-                <img src="img/ranking/oldstyle.jpg" alt="oldstyle">
-                <div class="text">
-                  <h3>No.5</h3>
-                  <p>￥XX.XXX</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="ranking/index.html">
-                <img src="img/ranking/t-shirt.jpg" alt="t-shirt">
-                <div class="text">
-                  <h3>No.6</h3>
-                  <p>￥XX.XXX</p>
-                </div>
-              </a> 
-            </li>
-          </ul>
-        </div>
-      </div>
-        <!-- ranking -->
-        <!-- blog -->
-      <div class="blog">
-        <div class="blog_container container">
-          <h2 class="content-title">Blogs</h2>
-          <ul class="blog_items">
-            <li>
-              <a href="">
-                <div class="blog_item">
-                  <div class="image"><img src="img/blog/blog1.jpg" alt="blog1">
-                  </div>
-                  <div class="info">
-                    <h3>Article-Title</h3>
-                    <p>texttexttexttexttexttexttext</p>
-                    <div class="author">
-                      <img src="img/blog/author/men1.jpg" alt="men1">
-                      <h4>Author-Name</h4>
-                    </div>
-
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="blog_item">
-                  <div class="image"><img src="img/blog/blog2.jpg" alt="blog2">
-                  </div>
-                  <div class="info">
-                    <h3>Article-Title</h3>
-                    <p>texttexttexttexttexttexttext</p>
-                    
-                    <div class="author">
-                      <img src="img/blog/author/men2.jpg" alt="men2">
-                      <h4>Author-Name</h4>
-                    </div>
-
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="blog_item">
-                  <div class="image"><img src="img/blog/blog3.jpg" alt="blog3">
-                  </div>
-                  <div class="info">
-                    <h3>Article-Title</h3>
-                    <p>texttexttexttexttexttexttext</p>
-                    
-                    <div class="author">
-                      <img src="img/blog/author/men3.jpg" alt="men3">
-                      <h4>Author-Name</h4>
-                    </div>
-
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="blog_item">
-                  <div class="image"><img src="img/blog/blog4.jpg" alt="blog4">
-                  </div>
-                  <div class="info">
-                    <h3>Article-Title</h3>
-                    <p>texttexttexttexttexttexttext</p>
-                    
-                    <div class="author">
-                      <img src="img/blog/author/men4.jpg" alt="men4">
-                      <h4>Author-Name</h4>
-                    </div>
-
-                  </div>
-                </div>
-              </a>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-        <!-- blog -->
-        <div class="items">
-          <div class="items_container container">
-            <h2 class="content-title">Items</h2>
-            <div class="flex-items">
-              <ul>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/shirt.jpg" alt="shirt"><p>shirt</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/tops.jpg" alt="tops"><p>tops</p>
-                  </a>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/jacket.jpg" alt="jackets"><p>jackets</p>
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/t-shirt2.jpg" alt="pants"><p>t-shirt</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/suits.jpg" alt="suits"><p>suits</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/goods.jpg" alt="goods"><p>goods</p>
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/watch.jpg" alt="watch"><p>watch</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/bag.jpg" alt="bag"><p>bag</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="flex-items">
-                    <img src="img/circle/sea_all.jpg" alt="show all"><p>show all</p>
-                  </a>
-                </li>
-              </ul>
+      <div class="hero section">
+        <div class="hero_container">
+          <div class="hero_images">
+            <div class="image1 image">
+              <img class="off" src="img/mainvisual/main1-p.jpg" alt="image1_off">
+              <img class="on" src="img/mainvisual/main1.jpg" alt="image1_off">
+            </div>
+            <div class="image2 image">
+              <img class="off" src="img/mainvisual/main2-p.jpg" alt="image2_off">
+              <img class="on" src="img/mainvisual/main2.jpg" alt="image2_off">
+            </div>
+            <div class="image3 image">
+              <img class="off" src="img/mainvisual/main3-p.jpg" alt="image3_off">
+              <img class="on" src="img/mainvisual/main3.jpg" alt="image3_off">
+            </div>
+            <div class="image4 image">
+              <img class="off" src="img/mainvisual/main4-p.jpg" alt="image4_off">
+              <img class="on" src="img/mainvisual/main4.jpg" alt="image4_off">
+            </div>
+          </div>
+          <div class="hero_text">
+            <div class="copy_pc">
+              <h2>野菜がうまいと、<br>餃子は、うまい。</h2>
+            </div>
+            <div class="copy_sp">
+              <h2>野菜が<br>うまいと、<br>餃子は、<br>うまい。</h2>
             </div>
           </div>
         </div>
-            
-            <!-- シェアボタン -->
-            <div class="flex-items sns-btn">
-              <div class="fb-share-button" data-href="https://kshirakura.github.io/BooksChange/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkshirakura.github.io%2FBooksChange%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
-              <a data-size="large" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      </div>
+      <div id="concept" class="boxes section">
+        <div class="boxes_container container ">
+          <a href="">
+            <div class="box1 box fadeIn">
+            <img src="img/kodawari.jpg" alt="こだわりイメージ">
+            <h1>餡にこだわり、アリ。</h1>
+          </div>
+          </a>
+          <div class="box2_box3">
+            <a href="">
+              <div class="box2 fadeIn box">
+                <div class="image">
+                  <img class="sp" src="img/online.png" alt="オンライン購入">
+              <img class="pc" src="img/online-long.png" alt="オンライン購入">
+                </div>
+                <div class="text">
+                  <h2>オンライン購入</h2>
+                </div>
             </div>
-            <!-- シェアボタン -->
-            
-          </main>
+            </a>
+            <a href="">
+              <div class="box3 fadeIn box">
+                <div class="image">
+                  <img class="sp" src="img/iiyasai-square.jpg" alt="良い野菜、使ってます">
+              <img class="pc" src="img/iiyasai.jpg" alt="オンライン購入">
+                </div>
+                <div class="text">
+                  <h2>良い野菜、使ってます</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="policy fadeIn section">
+        <div class="policy_container container">
+          <h1 class="title">伝統の野菜餃子</h1>
+          <div class="media_object">
+            <div class="image">
+              <img src="img/policy.jpg" alt="policy">
+            </div>
+            <div class="text">
+              <h2>美味しい野菜と、<br>こだわりの餡配分</h2>
+              <p>ニッポンギョーザの餃子の餡は80%が野菜。最高の食材を使い、何通りもの餡配分を試した末に作られたこだわりの餃子は昔から変わらない美味しさです。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="news" class="news section">
+        <div class="news_container container">
+          <h1 class="title">新着情報</h1>
+          <dl>
+            <dt><a href="">2021.12.10</a></dt>
+            <dd><a href="">すごいニュースすごいニュースすごいニュース</a></dd>
+            <dt><a href="">2021.12.10</a></dt>
+            <dd><a href="">すごいニュースすごいニュースすごいニュース</a></dd>
+            <dt><a href="">2021.12.10</a></dt>
+            <dd><a href="">すごいニュースすごいニュースすごいニュース</a></dd>
+          </dl>
+          <a href="">すべて表示</a>
+        </div>
+      </div>
+      <div id="goods" class="recomend section">
+        <div class="recommend_container container fadeIn">
+          <h1 class="title">おすすめ商品</h1>
+          <div class="cards">
+            <a href="">
+              <div class="card card1">
+                <div class="image">
+                  <img src="img/recommend/recommend1.jpg" alt="うまい餃子1">
+                </div>
+                <div class="text">
+                  <h2>うまい餃子</h2>
+              <p>とても美味しい。とても美味しい。とても美味しい。とても美味しい。</p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="card card2">
+                <div class="image">
+                  <img src="img/recommend/recommend2.jpg" alt="うまい餃子2">
+                </div>
+                <div class="text">
+                  <h2>うまい餃子</h2>
+              <p>とても美味しい。とても美味しい。とても美味しい。とても美味しい。</p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="card card3">
+                <div class="image">
+                  <img src="img/recommend/recommend3.jpg" alt="うまい餃子3">
+                </div>
+                <div class="text">
+                  <h2>うまい餃子</h2>
+              <p>とても美味しい。とても美味しい。とても美味しい。とても美味しい。</p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="card card4">
+                <div class="image">
+                  <img src="img/recommend/recommend4.jpg" alt="うまい餃子4">
+                </div>
+                <div class="text">
+                  <h2>うまい餃子</h2>
+              <p>とても美味しい。とても美味しい。とても美味しい。とても美味しい。</p>
+                </div>
+              </div>
+            </a>
+          </div> <!--recomend_container-->
+        </div>
+      </div>
+
+      <!-- シェアボタン -->
+      <div class="flex-items sns-btn">
+        <div class="fb-share-button" data-href="https://kshirakura.github.io/BooksChange/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkshirakura.github.io%2FBooksChange%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
+        <a data-size="large" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      </div>
+      <!-- シェアボタン -->
+
+    </main>
     <!-- ハンバーガーメニュー -->
-    <div class="hamburger-menu">
-      <div class="menu-btn"><span></span></div>
-    </div>
     <!-- TOPボタン -->
-    <p id="page-top"><a href="#">↑</a></p>
+    <p id="page-top"><a href="#"><img src="img/go-to-top.svg" alt="to-top"></a></p>
     <!-- TOPボタン -->
+
     <footer class="footer">
       <div class="footer_container container">
-
-        <h2>Fash</h2>
-        <p>&copy;Fash</p>
+        <h2><img src="img/nippongyoza_logo2.svg" alt="nippongyoza_logo"></h2>
+      <p>&copy;ニッポンギョーザ</p>
       </div>
     </footer>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script type="text/javascript" src="js/slick.js"></script>
-      <script src="js/fitie.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inview.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v11.0" nonce="ETaQp8uF"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   </body>
 </html>
